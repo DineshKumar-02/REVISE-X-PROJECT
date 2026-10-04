@@ -1,0 +1,69 @@
+<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Ambient Base Gradient -->
+    <linearGradient id="rxTileBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1409" />
+      <stop offset="50%" stop-color="#1a0c05" />
+      <stop offset="100%" stop-color="#0f0703" />
+    </linearGradient>
+
+    <!-- Border Glow -->
+    <linearGradient id="rxTileBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#9a3412" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="rxGradOrange" x1="15%" y1="15%" x2="85%" y2="85%">
+      <stop offset="0%" stop-color="#ff8f3d" />
+      <stop offset="45%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+
+    <linearGradient id="rxGradAmber" x1="85%" y1="15%" x2="15%" y2="85%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="35%" stop-color="#f59e0b" />
+      <stop offset="75%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+
+    <linearGradient id="rxFoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+
+    <filter id="rxNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Logo Mark (Scaled 52x52 at x=6, y=6) -->
+  <g transform="translate(6, 6) scale(0.52)">
+    <!-- Squircle Base -->
+    <rect x="3" y="3" width="94" height="94" rx="22" fill="url(#rxTileBg)" stroke="url(#rxTileBorder)" stroke-width="2.5" />
+    <circle cx="50" cy="50" r="28" fill="#ea580c" opacity="0.22" filter="url(#rxNeonGlow)" />
+    <path d="M 22 34 L 32 19 L 46 36 L 36 51 Z" fill="#f59e0b" opacity="0.35" />
+    <path d="M 26 22 C 26 22, 38 18, 43 23 L 76 71 L 64 78 L 60 78 L 26 31 Z" fill="url(#rxGradOrange)" />
+    <line x1="33" y1="26" x2="40" y2="28" stroke="#ffedd5" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+    <line x1="36" y1="32" x2="45" y2="34" stroke="#ffedd5" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+    <line x1="40" y1="38" x2="48" y2="40" stroke="#ffedd5" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+    <path d="M 74 22 L 59 19 L 26 73 L 38 79 L 51 58 L 74 22 Z" fill="url(#rxGradAmber)" />
+    <path d="M 73 23 L 59 20 L 46 41 L 49 43 L 73 23 Z" fill="#ffffff" opacity="0.35" />
+    <path d="M 64 78 L 76 71 L 68 64 Z" fill="url(#rxFoldGrad)" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.5" />
+    <g filter="url(#rxNeonGlow)">
+      <path d="M 57 39 L 45 50 L 57 61" fill="none" stroke="#fff7ed" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M 57 39 L 45 50 L 57 61" fill="none" stroke="#fde047" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <polygon points="45,46 47,50 45,54 43,50" fill="#ffffff" filter="url(#rxNeonGlow)" />
+    <path d="M 6 24 C 6 14 14 6 24 6 L 76 6 C 86 6 94 14 94 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.25" />
+  </g>
+
+  <!-- Typography: Revise-X -->
+  <text x="70" y="36" font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif" font-size="24" font-weight="800" fill="#1c1917" letter-spacing="-0.5">
+    Revise<tspan fill="#ea580c">-X</tspan>
+  </text>
+  <text x="71" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#ea580c" letter-spacing="1">
+    ₹50 NOTES HUB
+  </text>
+</svg>

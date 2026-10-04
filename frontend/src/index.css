@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Typography */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Modern Developer Dark Slate & Cyber Blue Palette (Completely distinct from ThinkHub) */
+  --bg-primary: #0b0f19;            /* Deep Obsidian Navy */
+  --bg-secondary: #0f172a;          /* Rich Midnight Slate */
+  --bg-surface: #111827;            /* Surface Card Base */
+  --bg-surface-elevated: #162032;   /* Elevated Card Surface */
+  --bg-card: #111827;
+  --bg-card-hover: #162032;
+  --bg-glass: rgba(11, 15, 25, 0.88);
+  --bg-input: #0f172a;
+
+  /* Cool Slate Borders */
+  --border-subtle: #1e293b;
+  --border-hover: #334155;
+  --border-focus: #38bdf8;
+  --border-glow: rgba(56, 189, 248, 0.2);
+
+  /* Primary Brand: Royal Blue & Electric Cyan */
+  --primary: #2563eb;               /* Vibrant Royal Blue */
+  --primary-dark: #1d4ed8;          /* Deep Blue */
+  --primary-light: #38bdf8;         /* Electric Cyan */
+  --primary-glow: rgba(37, 99, 235, 0.25);
+  
+  /* Cool Tech Accent Tokens */
+  --accent-cyan: #38bdf8;           /* Vivid Cyan */
+  --accent-cyan-bg: rgba(56, 189, 248, 0.12);
+  --accent-indigo: #818cf8;         /* Indigo */
+  --accent-emerald: #10b981;        /* Emerald Success */
+  --accent-amber: #fbbf24;          /* Warm Gold Amber */
+  --accent-rose: #f43f5e;           /* Rose Alert */
+
+  /* Crisp Typography Colors for Dark Mode */
+  --text-main: #f8fafc;             /* High contrast crisp white */
+  --text-primary: #f1f5f9;
+  --text-muted: #94a3b8;          /* Cool slate subtitle */
+  --text-dim: #64748b;            /* Dim helper text */
+
+  /* Geometry & Elevation */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 30px -6px rgba(37, 99, 235, 0.18);
+  --shadow-modal: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Ambient Blue Radial Glow in Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  left: 25%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}

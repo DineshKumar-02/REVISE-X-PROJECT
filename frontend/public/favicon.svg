@@ -1,0 +1,79 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Ambient Base Gradient -->
+    <linearGradient id="rxTileBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1409" />
+      <stop offset="50%" stop-color="#1a0c05" />
+      <stop offset="100%" stop-color="#0f0703" />
+    </linearGradient>
+
+    <!-- Border Glow -->
+    <linearGradient id="rxTileBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Diagonal 1: Vivid Sunset Orange -> Burnt Terracotta -->
+    <linearGradient id="rxGradOrange" x1="15%" y1="15%" x2="85%" y2="85%">
+      <stop offset="0%" stop-color="#ff9a4d" />
+      <stop offset="40%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+
+    <!-- Diagonal 2: Intense Golden Amber -> Fiery Orange -->
+    <linearGradient id="rxGradAmber" x1="85%" y1="15%" x2="15%" y2="85%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="30%" stop-color="#fbbf24" />
+      <stop offset="70%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+
+    <!-- Folded Corner Gradient -->
+    <linearGradient id="rxFoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+
+    <filter id="rxNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect x="3" y="3" width="94" height="94" rx="22" fill="url(#rxTileBg)" stroke="url(#rxTileBorder)" stroke-width="2.5" />
+
+  <!-- Ambient Glow -->
+  <circle cx="50" cy="50" r="28" fill="#ea580c" opacity="0.22" filter="url(#rxNeonGlow)" />
+
+  <!-- Layer 1: Stacked Page Behind -->
+  <path d="M 22 34 L 32 19 L 46 36 L 36 51 Z" fill="#f59e0b" opacity="0.38" />
+
+  <!-- Layer 2: Main Diagonal Slash A (The Revision Sheet) -->
+  <path d="M 26 22 C 26 22, 38 18, 43 23 L 76 71 L 64 78 L 60 78 L 26 31 Z" fill="url(#rxGradOrange)" />
+
+  <!-- Ruled Cheatsheet Lines -->
+  <line x1="33" y1="26" x2="40" y2="28" stroke="#ffedd5" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+  <line x1="36" y1="32" x2="45" y2="34" stroke="#ffedd5" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+  <line x1="40" y1="38" x2="48" y2="40" stroke="#ffedd5" stroke-width="2.2" stroke-linecap="round" opacity="0.85" />
+
+  <!-- Layer 3: Diagonal Slash B (Tech Multiplier) -->
+  <path d="M 74 22 L 59 19 L 26 73 L 38 79 L 51 58 L 74 22 Z" fill="url(#rxGradAmber)" />
+  <path d="M 73 23 L 59 20 L 46 41 L 49 43 L 73 23 Z" fill="#ffffff" opacity="0.35" />
+
+  <!-- Layer 4: Folded Page Dog-Ear -->
+  <path d="M 64 78 L 76 71 L 68 64 Z" fill="url(#rxFoldGrad)" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.5" />
+
+  <!-- Layer 5: Glowing Code Chevron `<` -->
+  <g filter="url(#rxNeonGlow)">
+    <path d="M 57 39 L 45 50 L 57 61" fill="none" stroke="#fff7ed" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 57 39 L 45 50 L 57 61" fill="none" stroke="#fde047" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Central Core Spark -->
+  <polygon points="45,46 47,50 45,54 43,50" fill="#ffffff" filter="url(#rxNeonGlow)" />
+
+  <!-- Rim Highlight -->
+  <path d="M 6 24 C 6 14 14 6 24 6 L 76 6 C 86 6 94 14 94 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.25" />
+</svg>
